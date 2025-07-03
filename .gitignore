@@ -1,0 +1,10 @@
+**/a.out
+**/lib/*
+**/*.o
+**/*.d
+**/.obj/
+.vscode/settings.json
+
+ex00/whatever
+ex01/iter
+ex02/array
