@@ -1,13 +1,13 @@
-# CPP06 #
+# CPP07 #
 
-CPP Module 06 or how to learn C++ from C.
+CPP Module 07 or how to learn C++ from C.
 
-Casts : static_cast, reinterpret_cast and dynamic_cast.
+Templates
 
 ---
 
-# CPP06 #
+# CPP07 #
 
-CPP Module 06 ou comment apprendre le C++ à partir du C.
+CPP Module 07 ou comment apprendre le C++ à partir du C.
 
-Casts : static_cast, reinterpret_cast et dynamic_cast.
+Templates
