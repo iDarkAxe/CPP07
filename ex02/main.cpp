@@ -1,6 +1,9 @@
 #include <iostream>
 #include <Array.hpp>
 
+// Can't use srand without it
+#include <cstdlib>
+
 #define MAX_VAL 750
 int main(int, char**)
 {
