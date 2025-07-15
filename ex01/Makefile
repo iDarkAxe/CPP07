@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 DEPENDANCIES = -MMD -MP
 NO_DIR = --no-print-directory
 MAKE := $(MAKE) -j $(NO_DIR)
-NAME = whatever
+NAME = iter
 
 # Debugging flags
 CXXFLAGS_DEBUG = -Wall -Wextra -g3 -D DEBUG=1 -std=c++98
@@ -28,7 +28,7 @@ P_INC = ./
 #############################################################################################
 # Headers
 INC = \
-	whatever.hpp \
+	iter.hpp \
 
 # Source files
 SRC = \
