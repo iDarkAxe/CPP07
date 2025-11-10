@@ -12,12 +12,13 @@ int mandatory(void);
 void simple_test(void);
 void ascii_test(void);
 
-#define MAX_VAL 750
+#define MAX_VAL 10
+// #define MAX_VAL 750
 
 int main(int, char**)
 {
-	// mandatory();
-	// simple_test();
+	mandatory();
+	simple_test();
 	ascii_test();
 }
 
@@ -63,17 +64,25 @@ int mandatory(void)
 		numbers[i] = value;
 		mirror[i] = value;
 	}
+	std::cout << "Numbers array content:" << std::endl;
+	numbers.print(MAX_VAL);
+
 	//SCOPE
 	{
 		Array<int> tmp = numbers;
 		Array<int> test(tmp);
+		std::cout << "\nTmp array content:" << std::endl;
+		tmp.print(MAX_VAL);
+		std::cout << "\nTest array content:" << std::endl;
+		test.print(MAX_VAL);
+		std::cout << std::endl;
 	}
 
 	for (int i = 0; i < MAX_VAL; i++)
 	{
 		if (mirror[i] != numbers[i])
 		{
-			std::cerr << "didn't save the same value!!" << std::endl;
+			std::cout << "didn't save the same value!!" << std::endl;
 			return 1;
 		}
 	}
@@ -83,7 +92,7 @@ int mandatory(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 	try
 	{
@@ -91,13 +100,18 @@ int mandatory(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 
+	std::cout << "\nNumbers array content before:" << std::endl;
+	numbers.print();
 	for (int i = 0; i < MAX_VAL; i++)
 	{
 		numbers[i] = rand();
 	}
+	std::cout << "\nNumbers array content after:" << std::endl;
+	numbers.print();
+
 	delete [] mirror;//
 	return 0;
 }
